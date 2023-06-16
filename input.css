@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen(lg) {
+  .bg-hero {
+    height: 300px;
+    /* height: 500px; */
+    /* height: 250px; */
+    left: 30%;
+    width: 2000px;
+    @apply absolute rounded-l-full top-52 bg-softBlue;
+    /* @apply absolute rounded-full top64 bg-mediumblue; */
+  }
+
+  .bg-tabs {
+    width: 2000px;
+    /* width: 1200px; */
+    height: 300px;
+    right: 60%;
+    /* left: auto; */
+    @apply absolute rounded-r-full top-60 bg-softBlue;
+  }
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(38%) saturate(3303%) hue-rotate(326deg)
+    brightness(101%) contrast(96%);
+  /* filter: invert(56%) sepia(48%) saturate(4040%) hue-rotate(326deg)
+    brightness(105%) contrast(98%); */
+}
+
+/* hamburger menu */
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+  /* transform: translateX(0px); */
+  position: fixed;
+  /* margin: 20px 0; */
+  top: 50px;
+  right: 25px;
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background-color: #fff;
+  /* background-color: aliceblue; */
+}
+
+.open .hamburger-middle {
+  display: none;
+
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background-color: #fff;
+  /* padding: 40px 0; */
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  content: "";
+  position: absolute;
+  width: 24px;
+  /* max-width: 1200px; */
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #000;
+  /* background: #333; */
+  /* background: #888; */
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+  /* transform: translateX(7px);  */
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+  background: #000;
+  /* background: #555; */
+  /* background: #333; */
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  /* height: auto; */
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+
